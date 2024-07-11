@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isPendingDropdownOpen, setIsPendingDropdownOpen] = useState(false);
   const [isBetSlipDropdownOpen, setIsBetSlipDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -35,6 +36,10 @@ const Navbar = () => {
   };
   const handleTabChange = (tab) => {
     setActiveTab(tab);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const content = (
@@ -406,23 +411,23 @@ const Navbar = () => {
         <p className="text-md font-bold ms-5">Bet Slip</p>
       </div>
       <div className="p-2">
-      {Array(3)
-        .fill("")
-        .map((_, index) => (
-          <div
-            key={index}
-            className="flex justify-between items-center  py-2 px-4 border rounded-md mb-2 mt-2 shadow-sm"
-          >
-            <div>
-              <p className="font-semibold text-sm">{`7. Barney's Blaze`}</p>
-              <p className="text-gray-500 text-sm">Kyneton-R3 1118 Mdn</p>
+        {Array(3)
+          .fill("")
+          .map((_, index) => (
+            <div
+              key={index}
+              className="flex justify-between items-center  py-2 px-4 border rounded-md mb-2 mt-2 shadow-sm"
+            >
+              <div>
+                <p className="font-semibold text-sm">{`7. Barney's Blaze`}</p>
+                <p className="text-gray-500 text-sm">Kyneton-R3 1118 Mdn</p>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-gray text-md font-medium">1.55</span>
+                <span className="text-gray-500 text-sm">Fixed Win</span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-gray text-md font-medium">1.55</span>
-              <span className="text-gray-500 text-sm">Fixed Win</span>
-            </div>
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
@@ -443,7 +448,7 @@ const Navbar = () => {
               <div className="hidden md:flex space-x-8 ml-10 h-full">
                 <a
                   href="#"
-                  onClick={handleDrawerOpen}
+                  onClick={toggleDropdown}
                   className="text-sm text-[#837CDB] hover:text-gray-700 bg-gray-100 flex items-center h-full px-4 no-underline"
                 >
                   Form Guides
@@ -451,20 +456,20 @@ const Navbar = () => {
                 <a
                   href="#"
                   className="text-sm text-gray-700 flex items-center h-full px-4 no-underline"
-                  onClick={handleDrawerOpen}
+                  onClick={toggleDropdown}
                 >
                   Tips
                 </a>
                 <a
                   href="#"
                   className="text-sm text-gray-700 flex items-center h-full px-4 no-underline"
-                  onClick={handleDrawerOpen}
+                  onClick={toggleDropdown}
                 >
                   Social Feed
                 </a>
               </div>
             </div>
-            <div className="flex items-center">
+            <div className="hidden lg:flex items-center">
               <div className="relative">
                 <div
                   className={`flex justify-between items-center w-[250px] p-2 ${
@@ -533,8 +538,53 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+            <div className="md:hidden flex items-center">
+              <button
+                className="text-gray-700 focus:outline-none"
+                onClick={toggleMobileMenu}
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
+        {isMobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <a
+                href="#"
+                className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Form Guides
+              </a>
+              <a
+                href="#"
+                className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Tips
+              </a>
+              <a
+                href="#"
+                className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+              >
+                Social Feed
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
       <Drawer
         isOpen={isDrawerOpen}
