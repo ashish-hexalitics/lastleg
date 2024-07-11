@@ -9,20 +9,19 @@ const App = () => {
   return (
     <>
       <ClickEffect />
-      <Router>
-        <div className="flex h-screen">
+      <div className="flex h-screen">
+        <Navbar />
+        <div className="flex w-full">
           <Sidebar />
-          <div className="flex flex-col w-full">
-            <Navbar />
-            <div className="px-5 py-2 flex-grow">
+          <Router>
+            <div className="ms-16">
               <Routes>
                 <Route path="/" element={<Layout />} />
-                {/* Define more routes as needed */}
               </Routes>
             </div>
-          </div>
+          </Router>
         </div>
-      </Router>
+      </div>
     </>
   );
 };

@@ -157,37 +157,38 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-between  lg:px-8 py-10 border-t border-gray-700">
+      {/* Bottom Section */}
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between lg:px-8 py-6 border-t border-gray-700">
         <div className="mb-4 lg:mb-0">
           <h1 className="text-4xl font-bold">LastLeg</h1>
-          <div className="mt-4 flex justify-center space-x-2">
+          <div className="mt-4 flex justify-center lg:justify-start space-x-2">
             <a
               href="#"
-              className="text-white w-[30px] h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
+              className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
             >
               <FaFacebookF />
             </a>
             <a
               href="#"
-              className="text-white w-[30px] h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
+              className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
             >
               <IoLogoInstagram />
             </a>
             <a
               href="#"
-              className="text-white w-[30px] h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
+              className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
             >
               <FaTwitter />
             </a>
             <a
               href="#"
-              className="text-white w-[30px] h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
+              className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
             >
               <CiYoutube />
             </a>
           </div>
         </div>
-        <div className="text-sm">
+        <div className="text-sm text-center lg:text-left">
           <p className="font-light mb-1">
             Chances are you're about to lose. For free and confidential support
             call 1800 858 858 or visit gamblinghelponline.org.au.

@@ -448,7 +448,7 @@ const Navbar = () => {
               <div className="hidden md:flex space-x-8 ml-10 h-full">
                 <a
                   href="#"
-                  onClick={toggleDropdown}
+                  onClick={handleDrawerOpen}
                   className="text-sm text-[#837CDB] hover:text-gray-700 bg-gray-100 flex items-center h-full px-4 no-underline"
                 >
                   Form Guides
@@ -456,14 +456,14 @@ const Navbar = () => {
                 <a
                   href="#"
                   className="text-sm text-gray-700 flex items-center h-full px-4 no-underline"
-                  onClick={toggleDropdown}
+                  onClick={handleDrawerOpen}
                 >
                   Tips
                 </a>
                 <a
                   href="#"
                   className="text-sm text-gray-700 flex items-center h-full px-4 no-underline"
-                  onClick={toggleDropdown}
+                  onClick={handleDrawerOpen}
                 >
                   Social Feed
                 </a>
