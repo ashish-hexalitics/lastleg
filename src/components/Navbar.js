@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Drawer from "./Drawer";
+import Drawer from "./common/Drawer";
 import { Collapse, Tab, Ripple, initTWE } from "tw-elements";
 import { RxCross1 } from "react-icons/rx";
 import { IoShareSocial } from "react-icons/io5";

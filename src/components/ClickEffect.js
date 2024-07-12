@@ -13,7 +13,7 @@ const ClickEffect = () => {
 
       setTimeout(() => {
         setShowCircle(false);
-      }, 300); // Duration for the circle to disappear
+      }, 300);
     };
 
     window.addEventListener('click', handleClick);

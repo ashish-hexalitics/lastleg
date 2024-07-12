@@ -2,9 +2,9 @@ import React from "react";
 import { RiHandCoinLine } from "react-icons/ri";
 import { HiOutlineUsers } from "react-icons/hi";
 import { MdOutlineVerifiedUser } from "react-icons/md";
-import NewsPostCard from "./NewsPostCard";
-import LatestWin from "./LatestWin";
-import Footer from "./Footer";
+import NewsPostCard from "../components/NewsPostCard";
+import LatestWin from "../components/LatestWin";
+import Footer from "../components/Footer";
 import { TfiCup } from "react-icons/tfi";
 
 const newsPosts = [
