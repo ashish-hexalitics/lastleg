@@ -126,23 +126,23 @@ const Navbar = () => {
                         <h3 className="font-semibold text-sm me-4">
                           Bet365 Geelong - Race 1
                         </h3>
-                        <button className="bg-pink-200 p-2 text-pink-500 rounded-sm text-sm">
+                        <div className="bg-pink-200 p-2 text-pink-500 rounded-sm text-sm">
                           BB
-                        </button>
-                        <button className="bg-pink-200 text-pink-500 p-2 ms-1 rounded-sm text-sm">
+                        </div>
+                        <div className="bg-pink-200 text-pink-500 p-2 ms-1 rounded-sm text-sm">
                           1 Min 5 Sec
-                        </button>
+                        </div>
                         <span className="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="1.5"
+                            strokeWidth="1.5"
                             stroke="currentColor"
                           >
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                             />
                           </svg>
@@ -234,12 +234,12 @@ const Navbar = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="1.5"
+                            strokeWidth="1.5"
                             stroke="currentColor"
                           >
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                             />
                           </svg>
@@ -290,12 +290,12 @@ const Navbar = () => {
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
                                         viewBox="0 0 24 24"
-                                        stroke-width="1.5"
+                                        strokeWidth="1.5"
                                         stroke="currentColor"
                                       >
                                         <path
-                                          stroke-linecap="round"
-                                          stroke-linejoin="round"
+                                          strokeLinecap="round"
+                                          strokeLinejoin="round"
                                           d="M19.5 8.25l-7.5 7.5-7.5-7.5"
                                         />
                                       </svg>
