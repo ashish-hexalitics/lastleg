@@ -6,6 +6,7 @@ import NewsPostCard from "../components/NewsPostCard";
 import LatestWin from "../components/LatestWin";
 import Footer from "../components/Footer";
 import { TfiCup } from "react-icons/tfi";
+import { Link } from "react-router-dom";
 
 const newsPosts = [
   {
@@ -164,21 +165,21 @@ function Landing() {
         </div>
         <div className="flex flex-col sm:flex-row justify-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4 px-4 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-2 text-gray-700">
-            <a href="#" className="text-[#6761bd]">
+            <Link className="text-[#6761bd]">
               <RiHandCoinLine size={20} fontWeight={200} />
-            </a>
+            </Link>
             <p>Best Top Tipper</p>
           </div>
           <div className="flex items-center space-x-2 text-gray-700">
-            <a href="#" className="text-[#6761bd]">
+            <Link className="text-[#6761bd]">
               <HiOutlineUsers size={20} fontWeight={200} />
-            </a>
+            </Link>
             <p>Free Tips</p>
           </div>
           <div className="flex items-center space-x-2 text-gray-700">
-            <a href="#" className="text-[#6761bd]">
+            <Link className="text-[#6761bd]">
               <MdOutlineVerifiedUser size={20} fontWeight={200} />
-            </a>
+            </Link>
             <p>Verified by Experts</p>
           </div>
         </div>

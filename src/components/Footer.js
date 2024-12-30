@@ -3,7 +3,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaTwitter } from "react-icons/fa";
 import { CiYoutube } from "react-icons/ci";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-[#251754] text-white py-8 w-full">
@@ -162,30 +162,18 @@ const Footer = () => {
         <div className="mb-4 lg:mb-0">
           <h1 className="text-4xl font-bold">LastLeg</h1>
           <div className="mt-4 flex justify-center lg:justify-start space-x-2">
-            <a
-              href="#"
-              className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
-            >
+            <Link className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400">
               <FaFacebookF />
-            </a>
-            <a
-              href="#"
-              className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
-            >
+            </Link>
+            <Link className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400">
               <IoLogoInstagram />
-            </a>
-            <a
-              href="#"
-              className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
-            >
+            </Link>
+            <Link className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400">
               <FaTwitter />
-            </a>
-            <a
-              href="#"
-              className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400"
-            >
+            </Link>
+            <Link className="text-white w-8 h-8 lg:w-[30px] lg:h-[30px] rounded-full flex items-center justify-center p-2 bg-[#402c80] hover:bg-sky-400">
               <CiYoutube />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="text-sm text-center lg:text-left">

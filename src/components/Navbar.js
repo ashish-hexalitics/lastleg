@@ -3,6 +3,7 @@ import Drawer from "./common/Drawer";
 import { Collapse, Tab, Ripple, initTWE } from "tw-elements";
 import { RxCross1 } from "react-icons/rx";
 import { IoShareSocial } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -446,27 +447,24 @@ const Navbar = () => {
                 />
               </div>
               <div className="hidden md:flex space-x-8 ml-10 h-full">
-                <a
-                  href="#"
+                <Link
                   onClick={handleDrawerOpen}
                   className="text-sm text-[#837CDB] hover:text-gray-700 bg-gray-100 flex items-center h-full px-4 no-underline"
                 >
                   Form Guides
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
                   className="text-sm text-gray-700 flex items-center h-full px-4 no-underline"
                   onClick={handleDrawerOpen}
                 >
                   Tips
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
                   className="text-sm text-gray-700 flex items-center h-full px-4 no-underline"
                   onClick={handleDrawerOpen}
                 >
                   Social Feed
-                </a>
+                </Link>
               </div>
             </div>
             <div className="hidden lg:flex items-center">
@@ -483,12 +481,12 @@ const Navbar = () => {
                     alt="User Profile"
                   />
                   <div className="flex flex-col">
-                    <a className="text-sm text-gray-400">Hello Kane</a>
-                    <a className="text-sm text-gray-900">My account</a>
+                    <Link className="text-sm text-gray-400">Hello Kane</Link>
+                    <Link className="text-sm text-gray-900">My account</Link>
                   </div>
                   <div className="flex flex-col">
-                    <a className="text-sm text-gray-400">Balance</a>
-                    <a className="text-sm text-gray-900">VC199.99</a>
+                    <Link className="text-sm text-gray-400">Balance</Link>
+                    <Link className="text-sm text-gray-900">VC199.99</Link>
                   </div>
                 </div>
                 {isDropdownOpen && (
@@ -523,9 +521,9 @@ const Navbar = () => {
                   className="flex justify-center items-center border-e border-gray-400 p-2 bg-[#837CDB] w-[50%] overflow-hidden"
                   onClick={handlePendingDrawer}
                 >
-                  <a className="text-sm text-white cursor-pointer">
+                  <Link className="text-sm text-white cursor-pointer">
                     Pending <br /> 15
-                  </a>
+                  </Link>
                 </div>
                 <div
                   className="flex justify-center items-center p-2"
@@ -564,24 +562,15 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a
-                href="#"
-                className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-              >
+              <Link className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">
                 Form Guides
-              </a>
-              <a
-                href="#"
-                className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-              >
+              </Link>
+              <Link className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">
                 Tips
-              </a>
-              <a
-                href="#"
-                className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-              >
+              </Link>
+              <Link className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium">
                 Social Feed
-              </a>
+              </Link>
             </div>
           </div>
         )}

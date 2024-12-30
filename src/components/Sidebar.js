@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { BiBarChartAlt2 } from "react-icons/bi";
 import { LuUserSquare } from "react-icons/lu";
-import { PiHandCoinsBold } from "react-icons/pi";
 import { LiaSave } from "react-icons/lia";
 import { BsThreeDots } from "react-icons/bs";
 import { BsClipboardData } from "react-icons/bs";
 import { RxCross1 } from "react-icons/rx";
 import { FaChevronDown } from "react-icons/fa6";
 import { CiUser } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -358,25 +358,30 @@ const Sidebar = () => {
       case "userSquare":
         return (
           <div className="p-2 w-full">
-            {Array(4).fill("").map((_, key) => {
-              return (
-                <div className="flex items-center justify-between px-4 py-2 border-b" key={key}>
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1683140621573-233422bfc7f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHBvcnRyYWl0fGVufDB8fDB8fHww"
-                    alt="PunterMaster"
-                    className="w-8 h-8 rounded-full"
-                  />
-                  <div className="ml-4">
-                    <p className="text-sm text-custom-purple">PunterMaster</p>
-                    <p className="text-gray-500 text-sm">Win-Loss 27-50</p>
+            {Array(4)
+              .fill("")
+              .map((_, key) => {
+                return (
+                  <div
+                    className="flex items-center justify-between px-4 py-2 border-b"
+                    key={key}
+                  >
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1683140621573-233422bfc7f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHBvcnRyYWl0fGVufDB8fDB8fHww"
+                      alt="PunterMaster"
+                      className="w-8 h-8 rounded-full"
+                    />
+                    <div className="ml-4">
+                      <p className="text-sm text-custom-purple">PunterMaster</p>
+                      <p className="text-gray-500 text-sm">Win-Loss 27-50</p>
+                    </div>
+                    <p className="text-gray-900 text-sm ">
+                      Just Submitted Tips For Race 4
+                    </p>
                   </div>
-                  <p className="text-gray-900 text-sm ">
-                    Just Submitted Tips For Race 4
-                  </p>
-                </div>
-              );
-            })}
-              <div className="p-2 flex w-full">
+                );
+              })}
+            <div className="p-2 flex w-full">
               <button className="py-2 bg-gradient-to-r from-[#714DE4] to-[#5E80E8] text-white rounded-md text-sm w-full">
                 Get started. View More
               </button>
@@ -455,41 +460,36 @@ const Sidebar = () => {
             </div>
             <div className="flex">
               <div className="flex flex-col items-center py-4 space-y-6 w-16">
-                <a
-                  href="#"
+                <Link
                   className="text-gray-500 p-2 rounded-md  hover:text-[#6761bd] hover:bg-[#827cdb45]"
                   onClick={() => handleDrawerOpen("barChart")}
                 >
                   <BiBarChartAlt2 size={20} fontWeight={200} />
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
                   className="text-gray-500 p-2 rounded-md  hover:text-[#6761bd] hover:bg-[#827cdb45]"
                   onClick={() => handleDrawerOpen("clipboardData")}
                 >
                   <BsClipboardData size={20} fontWeight={200} />
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
                   className="text-gray-500 p-2 rounded-md  hover:text-[#6761bd] hover:bg-[#827cdb45]"
                   onClick={() => handleDrawerOpen("userSquare")}
                 >
                   <LuUserSquare size={20} fontWeight={200} />
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
                   className="text-gray-500 p-2 rounded-md  hover:text-[#6761bd] hover:bg-[#827cdb45]"
                   onClick={() => handleDrawerOpen("save")}
                 >
                   <LiaSave size={20} fontWeight={200} />
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
                   className="text-gray-500 p-2 rounded-md  hover:text-[#6761bd] hover:bg-[#827cdb45]"
                   onClick={() => handleDrawerOpen("threeDots")}
                 >
                   <BsThreeDots size={20} fontWeight={200} />
-                </a>
+                </Link>
               </div>
               {isDrawerOpen && (
                 <div className="w-full p-2">{renderContent()}</div>
