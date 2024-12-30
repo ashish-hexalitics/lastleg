@@ -1,7 +1,5 @@
 import React from "react";
 import { IoIosAddCircleOutline } from "react-icons/io";
-import { CiUser } from "react-icons/ci";
-
 function LatestWin() {
   return (
     <div className="bg-gray-100 py-16 w-full px-16">

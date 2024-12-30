@@ -15,7 +15,7 @@ const NewsPostCard = ({
       <div className="p-2">
         <img
           src={imageSrc}
-          alt="Post Image"
+          alt={author.name}
           className="w-full h-56 object-cover rounded-md"
         />
       </div>

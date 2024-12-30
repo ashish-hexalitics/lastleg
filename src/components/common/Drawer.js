@@ -1,5 +1,4 @@
 import React from "react";
-import { RxCross1 } from "react-icons/rx";
 
 const Drawer = ({
   isOpen,

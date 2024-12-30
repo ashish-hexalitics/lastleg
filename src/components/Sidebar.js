@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { BiBarChartAlt2 } from "react-icons/bi";
-import { LuUserSquare } from "react-icons/lu";
+import { LuUsersRound } from "react-icons/lu";
 import { LiaSave } from "react-icons/lia";
 import { BsThreeDots } from "react-icons/bs";
 import { BsClipboardData } from "react-icons/bs";
@@ -476,7 +476,7 @@ const Sidebar = () => {
                   className="text-gray-500 p-2 rounded-md  hover:text-[#6761bd] hover:bg-[#827cdb45]"
                   onClick={() => handleDrawerOpen("userSquare")}
                 >
-                  <LuUserSquare size={20} fontWeight={200} />
+                  <LuUsersRound size={20} fontWeight={200} />
                 </Link>
                 <Link
                   className="text-gray-500 p-2 rounded-md  hover:text-[#6761bd] hover:bg-[#827cdb45]"
